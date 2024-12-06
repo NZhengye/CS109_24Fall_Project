@@ -17,7 +17,6 @@ public class LoginFrame extends JFrame {
     private JButton resetBtn;
     private LevelFrame levelFrame;
 
-
     public LoginFrame(int width, int height) {
         this.setTitle("Login Frame");
         this.setLayout(null);
