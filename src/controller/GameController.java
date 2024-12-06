@@ -83,6 +83,24 @@ public class GameController {
         return true;
     }
 
+    public boolean checkFail(MapMatrix model) {
+        //todo: Iterate the code related to checkFail
+        int[][] map = model.getMatrix();
+        for (int i = 0; i < model.getHeight(); i++) {
+            for (int j = 0; j < model.getWidth(); j++) {
+                if (map[i][j] / 10 == 1) {
+                    if ((map[i + 1][j] == 1 && map[i][j - 1] == 1) ||
+                            (map[i + 1][j] == 1 && map[i][j + 1] == 1) ||
+                            (map[i - 1][j] == 1 && map[i][j - 1] == 1) ||
+                            (map[i - 1][j] == 1 && map[i][j + 1] == 1)) {
+                        return true;
+                    }
+                }
+            }
+        }
+        return false;
+    }
+
     //todo: add other methods such as loadGame, saveGame...
     //todo: 还有回溯功能，可以实现一个栈，每次移动的时候将当前的状态压入栈中，当用户点击回溯的时候，将栈顶的状态弹出，然后重新绘制
 

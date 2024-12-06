@@ -125,6 +125,10 @@ public class GamePanel extends ListenerPanel {
         if (controller.checkVictory(this.model)) {
             JOptionPane.showMessageDialog(this, "You Win!", "Victory", JOptionPane.INFORMATION_MESSAGE);
         }
+        if (controller.checkFail(this.model)) {
+            //todo: need to add a restart button
+            JOptionPane.showMessageDialog(this, "You lose!, click restart and try again", "Fail", JOptionPane.INFORMATION_MESSAGE);
+        }
     }
 
     public void setStepLabel(JLabel stepLabel) {
