@@ -82,6 +82,12 @@ public class GameFrame extends JFrame {
             gamePanel.doMoveRight();
             gamePanel.requestFocusInWindow();//enable key listener
         });
+        this.saveBtn.addActionListener(e -> {
+            if(controller.isGuest()){
+                JOptionPane.showMessageDialog(this, "Guest mode cannot save game progress. Please log in.", "Error", JOptionPane.INFORMATION_MESSAGE);
+            }
+            gamePanel.requestFocusInWindow();//enable key listener
+        });
         //todo: add other button here such as , back, through mouseclick...
         this.setLocationRelativeTo(null);
         this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);

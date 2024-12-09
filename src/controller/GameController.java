@@ -14,6 +14,15 @@ import view.game.Hero;
 public class GameController {
     private final GamePanel view;
     private final MapMatrix model;
+    private boolean isGuest;
+
+    public boolean isGuest() {
+        return isGuest;
+    }
+
+    public void setGuest(boolean guest) {
+        isGuest = guest;
+    }
 
     public GameController(GamePanel view, MapMatrix model) {
         this.view = view;
