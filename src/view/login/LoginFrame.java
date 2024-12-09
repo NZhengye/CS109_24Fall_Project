@@ -21,13 +21,13 @@ public class LoginFrame extends JFrame {
         this.setTitle("Login Frame");
         this.setLayout(null);
         this.setSize(width, height);
-        JLabel userLabel = FrameUtil.createJLabel(this, new Point(50, 20), 70, 40, "username:");
-        JLabel passLabel = FrameUtil.createJLabel(this, new Point(50, 80), 70, 40, "password:");
-        username = FrameUtil.createJTextField(this, new Point(120, 20), 120, 40);
-        password = FrameUtil.createJTextField(this, new Point(120, 80), 120, 40);
+        JLabel userLabel = FrameUtil.createJLabel(this, new Point(100, 100), 70, 40, "username:");
+        JLabel passLabel = FrameUtil.createJLabel(this, new Point(100, 210), 70, 40, "password:");
+        username = FrameUtil.createJTextField(this, new Point(200, 100), 250, 40);
+        password = FrameUtil.createJTextField(this, new Point(200, 210), 250, 40);
 
-        submitBtn = FrameUtil.createButton(this, "Confirm", new Point(40, 140), 100, 40);
-        resetBtn = FrameUtil.createButton(this, "Reset", new Point(160, 140), 100, 40);
+        submitBtn = FrameUtil.createButton(this, "Confirm", new Point(150, 320), 100, 40);
+        resetBtn = FrameUtil.createButton(this, "Reset", new Point(350, 320), 100, 40);
 
         submitBtn.addActionListener(e -> {
             System.out.println("Username = " + username.getText());
