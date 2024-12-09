@@ -14,6 +14,11 @@ public class GameFrame extends JFrame {
     private JButton restartBtn;
     private JButton loadBtn;
     private JButton returnBtn;
+    private JButton LeftBtn;
+    private JButton RightBtn;
+    private JButton UpBtn;
+    private JButton DownBtn;
+    private JButton SaveBtn;
 
     private JLabel stepLabel;
     private GamePanel gamePanel;
@@ -30,9 +35,14 @@ public class GameFrame extends JFrame {
         this.controller = new GameController(gamePanel, mapMatrix);
 
         //使用 FrameUtil 工具类创建了重新开始和加载游戏的按钮，并配置了动作监听器以处理按钮点击事件
-        this.restartBtn = FrameUtil.createButton(this, "Restart", new Point(gamePanel.getWidth() + 80, 120), 80, 50);
-        this.loadBtn = FrameUtil.createButton(this, "Load", new Point(gamePanel.getWidth() + 80, 300), 80, 50);
-        this.returnBtn = FrameUtil.createButton(this, "Return", new Point(gamePanel.getWidth() + 80, 210), 80, 50);
+        this.restartBtn = FrameUtil.createButton(this, "Restart", new Point(gamePanel.getWidth() + 80, 120), 80, 40);
+        this.loadBtn = FrameUtil.createButton(this, "Load", new Point(gamePanel.getWidth() + 80, 260), 80, 40);
+        this.returnBtn = FrameUtil.createButton(this, "Return", new Point(gamePanel.getWidth() + 80, 190), 80, 40);
+        this.LeftBtn = FrameUtil.createButton(this,"⬅",new Point(gamePanel.getWidth() + 190,210),20,20);
+        this.RightBtn = FrameUtil.createButton(this,"➡",new Point(gamePanel.getWidth() + 250,210),20,20);
+        this.UpBtn = FrameUtil.createButton(this,"⬆",new Point(gamePanel.getWidth() + 220,180),20,20);
+        this.RightBtn = FrameUtil.createButton(this,"⬇",new Point(gamePanel.getWidth() + 220,240),20,20);
+        this.SaveBtn = FrameUtil.createButton(this,"Save",new Point(gamePanel.getWidth() + 80,330),80,40);
 
         /*创建了一个 JLabel 来显示游戏的当前步骤或状态。这个标签也相对于 GamePanel 进行定位，并添加到窗口中。
          *GamePanel 被设置为根据需要更新此标签。*/
