@@ -88,6 +88,7 @@ public class GameController {
         int[][] map = model.getMatrix();
         for (int i = 0; i < model.getHeight(); i++) {
             for (int j = 0; j < model.getWidth(); j++) {
+                if (map[i][j] == 12){break;}
                 if (map[i][j] / 10 == 1) {
                     if ((map[i + 1][j] == 1 && map[i][j - 1] == 1) ||
                             (map[i + 1][j] == 1 && map[i][j + 1] == 1) ||
