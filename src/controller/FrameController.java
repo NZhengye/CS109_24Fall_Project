@@ -42,4 +42,6 @@ public class FrameController {
         GameFrame gameFrame = new GameFrame(600, 450, mapMatrix);
         gameFrame.setVisible(true);
     }
+
+    public void saveGame(String path, GameFrame frame) {}
 }

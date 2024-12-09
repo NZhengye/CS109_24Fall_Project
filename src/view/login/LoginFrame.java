@@ -32,10 +32,15 @@ public class LoginFrame extends JFrame {
         submitBtn.addActionListener(e -> {
             System.out.println("Username = " + username.getText());
             System.out.println("Password = " + password.getText());
-            if (this.levelFrame != null) {
-                this.levelFrame.setVisible(true);
-                this.setVisible(false);
-            }
+//            LevelFrame levelFrame = new LevelFrame(600,450);
+//            setVisible(false);
+//            levelFrame.setVisible(true);
+//            System.out.println("check");
+//            if (this.levelFrame == null) {
+//                System.out.println("levelFrame != null");
+//                this.levelFrame.setVisible(true);
+//                this.setVisible(false);
+//            }
             //todo: check login info
 
         });

@@ -12,12 +12,11 @@ public class Main {
             startframe.setVisible(true);
             LoginFrame loginFrame = new LoginFrame(600,450);
             loginFrame.setVisible(false);
-            LevelFrame levelFrame = new LevelFrame(600,450);
-            levelFrame.setVisible(false);
-            loginFrame.setLevelFrame(levelFrame);
             SignupFrame signupframe = new SignupFrame(600,450);
             signupframe.setVisible(false);
-
+//            LevelFrame levelFrame = new LevelFrame(600,450);
+//            levelFrame.setVisible(false);
+//            loginFrame.setLevelFrame(levelFrame);
         });
     }
 }
